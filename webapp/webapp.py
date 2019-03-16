@@ -40,7 +40,6 @@ def selected_option():
             l.append(1)
         else:
             l.append(0)
-    print(l)
 
     plot_url = build_graph(unique_years,l)
     return render_template('display_plot.html', data = data, plot = plot_url, years = years, unique_years = unique_years)
