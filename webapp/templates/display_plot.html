@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% block body %}
+
+<hr>
+{% if plot %}
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-6">
+                <img src="{{ plot }}" height="500px" width="700px" alt="">
+            </div>
+            <div class="col-1"></div>
+            <div class="col-4">
+                <p>State: {{ data['state'] }}</p>
+                <p>Constitutency: {{ data['const'] }}</p>
+                <p>Party: {{ data['party'] }}</p>
+                <p>Years Won: {{ years }}</p>
+                <p>Years Participated: {{ unique_years }}</p>
+            </div>
+        </div>
+    </div>
+{% else %}
+  <div class="row">
+      <div class="col-2"></div>
+      <div class="col-10"><p>Please Select Options above</p></div>
+  </div>
+
+{% endif %}
+{% endblock %}
